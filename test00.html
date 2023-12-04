@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript-test</title>
+    <link rel="stylesheet" href="test.css">
 </head>
+
 <body>
-    
+    <p id="para">click</p>
+    <!-- <button id="btn" onclick="click(this)"></button> -->
+
+    <script>
+        const para = document.getElementById('para')
+        function greater(x, y){
+            if (x > y) {
+                res =`first number: ${x} is greater than second number: ${y}`
+            } else {
+                res = `second number: ${y} is greater than first number: ${x}`
+            }
+            para.innerHTML = res
+            console.log(res)
+        }
+        greater(100, 102)
+    </script>
 </body>
 </html>
