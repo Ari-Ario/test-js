@@ -8,33 +8,27 @@
 </head>
 
 <body>
-    <h1>The Grade Assigner</h1>
+    <h1>The Pluralizer</h1>
     <p id="para">click</p>
     <!-- <button id="btn" onclick="click(this)"></button> -->
 
     <script>
         const para = document.getElementById('para')
 
-        function assignGrade(num){
-            if (num<0 || num> 100) {
-                res = `${num} is out of range`
-            } else if (num>=0 && num<20) {
-                res = `${num} is A`
-            } else if (num>=20 && num<40) {
-                res = `${num} is B`
-            } else if (num>=40 && num<60) {
-                res = `${num} is C`
-            } else if (num>=60 && num<80) {
-                res = `${num} is D`
-            } else {
-                res = `${num} is F`
+        function pluralizer(name, num){
+            if (num == 0){
+                res = `you do not have any ${name}`
+            } else if (num ==1){
+                res = `you have one ${name}`
+            } else if (num > 1){
+                res = `you have ${num} ${name}s`
             }
 
             para.innerHTML = res
             console.log(res)
         }
         
-        assignGrade(99)
+        pluralizer("sth", 9)
     </script>
 </body>
 </html>
