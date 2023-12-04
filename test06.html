@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <h1>The Grade Assigner.</h1>
+    <p id="para">click</p>
+    <!-- <button id="btn" onclick="click(this)"></button> -->
+
+    <script>
+        const para = document.getElementById('para')
+
+        function gradeAssigner(num){
+            if (num<0 || num> 100) {
+                res = `${num} is out of range`
+            } else if (num>=90) {
+                res = `${num}, you got an A`
+            } else if (num>=80) {
+                res = `${num}, you got a B`
+            } else if (num>=70) {
+                res = `${num}, you got a C`
+            } else if (num>=60) {
+                res = `${num}, you got a D`
+            } else {
+                res = `${num}, you got a F`
+            }
+
+            para.innerHTML = res
+            console.log(res)
+        }
+        
+        gradeAssigner(95)
+
+
+    </script>
+</body>
+</html>
