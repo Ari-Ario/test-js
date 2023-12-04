@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <h1>The Word Guesser.</h1>
+    <div id="inp">
+        <label for="input"><b>Guess the word</b></label>
+        <input name="input" type="text" id="input" oninput="guess()">
+    </div>
+    <p id="para"></p>
+    <!-- <button id="btn" onclick="click(this)"></button> -->
+
+    <script>
+        function guess(){
+            const para = document.getElementById('para')
+            const input= document.getElementById('input').value
+            word = ["F", "O", "X"]
+            res ="";
+            let arr = input.split("")
+            for (let i=0; i<input.length; i++){
+                if (arr[i].toUpperCase() == word[i]){
+                    res += word[i]
+                } else if (input == word.join()){
+                    alert("Congragulations! You have done it!")
+                } else {
+                    res += "-"
+                }
+
+                para.innerHTML = res
+                console.log(res)
+            }
+
+        }
+
+        // function wordGuesser(){
+        //     let res = "";
+        //     for (let i =0; i<arr.length; i++) {
+        //         res += `<br>My #${i+1} choice is ${arr[i]}.`
+        //     } 
+
+        //     para.innerHTML = res
+        //     console.log(res)
+        // }
+
+        // wordGuesser()
+
+        
+    </script>
+</body>
+</html>

@@ -6,5 +6,13 @@ p {
     background-color: antiquewhite;
     padding: 20px;
     border: 1px solid brown;
-    border-radius: 20px;
+
+}
+
+#inp {
+    text-align: center;
+    font-size: 30px;
+    background-color: lightgrey;
+    padding: 20px;
+    border: 1px solid brown;
 }
