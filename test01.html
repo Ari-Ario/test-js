@@ -18,19 +18,19 @@
         function helloWorld(lang){
             switch (lang) {
                 case "de":
-                    res = `Hallo die Welt`
+                    res = `${lang}: Hallo die Welt`
                     break;
                 case "gr":
-                    res = `Kalimera Cosmos`
+                    res = `${lang}: Giea sou Cosme`
                     break;
                 default:
-                    res = `Hello World` 
+                    res = `${lang}: Hello World` 
             }
 
             para.innerHTML = res
             console.log(res)
         }
-        
+
         helloWorld("gr")
     </script>
 </body>
