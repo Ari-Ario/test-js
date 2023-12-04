@@ -8,24 +8,30 @@
 </head>
 
 <body>
-    <h1>What number's bigger?</h1>
+    <h1>The World Translator</h1>
     <p id="para">click</p>
     <!-- <button id="btn" onclick="click(this)"></button> -->
 
     <script>
         const para = document.getElementById('para')
 
-        function greater(x, y){
-            if (x > y) {
-                res =`first number: ${x} is greater than second number: ${y}`
-            } else {
-                res = `second number: ${y} is greater than first number: ${x}`
+        function helloWorld(lang){
+            switch (lang) {
+                case "de":
+                    res = `Hallo die Welt`
+                    break;
+                case "gr":
+                    res = `Kalimera Cosmos`
+                    break;
+                default:
+                    res = `Hello World` 
             }
+
             para.innerHTML = res
             console.log(res)
         }
-        greater(100, 102)
-
+        
+        helloWorld("gr")
     </script>
 </body>
 </html>
