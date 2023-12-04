@@ -8,27 +8,29 @@
 </head>
 
 <body>
-    <h1>The even/odd reporter</h1>
+    <h1>The even/odd reporter.</h1>
     <p id="para">click</p>
     <!-- <button id="btn" onclick="click(this)"></button> -->
 
     <script>
         const para = document.getElementById('para')
 
-        function pluralizer(name, num){
-            if (num == 0){
-                res = `you do not have any ${name}`
-            } else if (num ==1){
-                res = `you have one ${name}`
-            } else if (num > 1){
-                res = `you have ${num} ${name}s`
-            }
+        function checkEvenOdd(num){
+            let res = "";
+            for (let i=1; i<=num; i++){
+                if (i%2 ==1){
+                    res += `<br>${i} is odd.`
+                } else {
+                    res += `<br>${i} is even.`
+                }
+        }
 
             para.innerHTML = res
             console.log(res)
-        }
+    }
         
-        pluralizer("sth", 9)
+        checkEvenOdd(20)
+
 
     </script>
 </body>
