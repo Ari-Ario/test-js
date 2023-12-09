@@ -326,7 +326,8 @@ console.log("Game result: ", rockPaperScissors("rock", "paper")); // Example: Ou
 
 function magic8Ball() {
   // Write your code here
-  return;
+  const arr = Array("Yes", "No", "ask again later.");
+  return arr[Math.floor(Math.random()*3)]
 }
 console.log("Magic8Ball Spoke: ", magic8Ball()); // Example: Output should be one of the responses like "Yes" or "No"
 
@@ -338,7 +339,7 @@ console.log("Magic8Ball Spoke: ", magic8Ball()); // Example: Output should be on
 
 function calculateBMI(weight, height) {
   // Write your code here
-  return;
+  return weight/height**2;
 }
 console.log("The BMI is: ", calculateBMI(70, 1.75)); // Example: Output should be around 22.86
 
@@ -350,9 +351,9 @@ console.log("The BMI is: ", calculateBMI(70, 1.75)); // Example: Output should b
 
 function fahrenheitToCelsius(fahrenheit) {
   // Write your code here
-  return;
+  return (fahrenheit-32)*(5/9);
 }
-console.log("Celcius: ", fahrenheitToCelsius(140)); // Example: Output should be around 20
+console.log("Celcius: ", fahrenheitToCelsius(140)); // Example: Output should be around 60
 
 //----------------------------------
 
@@ -361,7 +362,14 @@ console.log("Celcius: ", fahrenheitToCelsius(140)); // Example: Output should be
 
 function countVowels(str) {
   // Write your code here
-  return;
+  const arr = str.split("");
+  let counter = 0;
+  for (let i=0; i<str.length; i++) {
+    if (arr[i] == "a" || arr[i] == "a" || arr[i] == "e" || arr[i] == "i" || arr[i] == "o" || arr[i] == "u") {
+      counter++
+    }
+  }
+  return counter;
 }
 console.log("Vovel Count: ", countVowels("Hello, world!")); // Example: Output should be 3
 
