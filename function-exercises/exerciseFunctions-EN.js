@@ -390,13 +390,14 @@ function emojiTranslator(text) {
   for(let i=0; i<text.length; i++){
     for (let key in translation){
       var value = translation[key]
-      if (text[i] === key.toString()) {
+      if (text[i].toLowerCase() === key) {
         res = value;
+        break;
       } else {
-      res = text[i];
+        res = text[i]
       }
     }
-    newArray.push(res);
+    newArray[i] = res;
   }
   const newText = newArray.join(" ")
   return newText;

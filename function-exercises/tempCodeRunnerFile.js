@@ -1,3 +1,5 @@
+function emojiTranslator(text) {
+  // Write your code here
   const translation = {
     hello: "👋",
     world: "🌍",
@@ -6,16 +8,17 @@
   text = text.split(" ");
   let newArray = Array();
   for(let i=0; i<text.length; i++){
-    for (let j=0; j<translation.length; j++){
-      if (text[i] in translation) {
-        newArray.push(text[i]);
+    for (let key in translation){
+      var value = translation[key]
+      if (text[i] === key.toString()) {
+        res = value;
       } else {
-      newArray.push(translation[j]);
+      res = text[i];
       }
-      j= 0;
     }
+    newArray.push(res);
   }
-  const newText = newArray.join("")
-  return newArray;
+  const newText = newArray.join(" ")
+  return newText;
 }
 console.log("Output: ", emojiTranslator("Hello world I love coding!"));
