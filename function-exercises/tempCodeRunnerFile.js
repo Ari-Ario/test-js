@@ -1,8 +1,6 @@
-function coinFlip() {
+
+function calculateTip(billAmount, tipPercentage) {
   // Write your code here
-  const arr = Array("HEAD", "TAIL");
-  for (index in arr) {
-    return Math.floor(Math.random()+1);
-  }
+  return billAmount * (tipPercentage/100);
 }
-console.log("Coinside: ", coinFlip()); // Example: Output should be "Heads" or "Tails"
+console.log("The tip should be: ", calculateTip(50, 15)); // Example: Output should be 7.5
