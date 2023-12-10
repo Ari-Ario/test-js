@@ -411,7 +411,10 @@ console.log("Output: ", emojiTranslator("Hello world I love coding!")); // Examp
 
 function coinFlip() {
   // Write your code here
-  return;
+  const arr = Array("HEAD", "TAIL");
+  for (index in arr) {
+    return arr[Math.floor(Math.random()*2)];
+  }
 }
 console.log("Coinside: ", coinFlip()); // Example: Output should be "Heads" or "Tails"
 
@@ -422,7 +425,14 @@ console.log("Coinside: ", coinFlip()); // Example: Output should be "Heads" or "
 
 function reverseArray(arr) {
   // Write your code here
-  return;
+  let currentArray = arr;
+  let reversedArray = Array();
+  // for (let i=0; i<currentArray.length; i++) or
+  while (currentArray.length !== 0){
+    let popItem = currentArray.pop();
+    reversedArray.push(popItem);
+  }
+  return reversedArray;
 }
 console.log("New Array: ", reverseArray([1, 2, 3, 4, 5])); // Example: Output should be [5, 4, 3, 2, 1]
 

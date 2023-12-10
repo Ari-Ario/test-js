@@ -1,24 +1,8 @@
-function emojiTranslator(text) {
+function coinFlip() {
   // Write your code here
-  const translation = {
-    hello: "👋",
-    world: "🌍",
-    love: "❤️",
-  };
-  text = text.split(" ");
-  let newArray = Array();
-  for(let i=0; i<text.length; i++){
-    for (let key in translation){
-      var value = translation[key]
-      if (text[i] === key.toString()) {
-        res = value;
-      } else {
-      res = text[i];
-      }
-    }
-    newArray.push(res);
+  const arr = Array("HEAD", "TAIL");
+  for (index in arr) {
+    return Math.floor(Math.random()+1);
   }
-  const newText = newArray.join(" ")
-  return newText;
 }
-console.log("Output: ", emojiTranslator("Hello world I love coding!"));
+console.log("Coinside: ", coinFlip()); // Example: Output should be "Heads" or "Tails"
