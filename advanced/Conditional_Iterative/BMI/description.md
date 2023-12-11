@@ -2,7 +2,6 @@
 
 (https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations)
 
-
 The BMI formula is given by
 BMI = weight / height^2
 where weight is in kilograms and height is in meters.

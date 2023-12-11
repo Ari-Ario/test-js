@@ -1,7 +1,6 @@
-
 def bmiCalculator():
-    height = float(input("Enter the height in meter: "))
-    weight = float(input("Enter the weight in kilo: "))
+    height = float(input("Enter the height: "))
+    weight = float(input("Enter the weight: "))
     bmi = weight / (height**2)
     res = ""
     if (bmi >= 0 and bmi <= 18.5):
@@ -18,6 +17,6 @@ def bmiCalculator():
         res = "Obesity class III"
     else:
         res = "Enter a positive number"
-    return "The person with height: {:.2f} and weight: {:.2f} is {}".format(height, weight, res)
+    return "The person with height: {height} and weight: {weight} is {res}"
 
 print(bmiCalculator())
