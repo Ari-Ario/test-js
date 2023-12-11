@@ -1,7 +1,7 @@
 # Body Mass index (BMI) Calculator
 
-The following table contains information on the body mass index (BMI) for adults from the [WHO website](https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations)
-. The intervals are defined in mathematical notation, "()" meaning "non-inclusive" and "\[]" meaning inclusive.
+(https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations)
+
 
 The BMI formula is given by
 BMI = weight / height^2
