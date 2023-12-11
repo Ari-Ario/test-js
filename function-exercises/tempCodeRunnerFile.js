@@ -1,6 +1,12 @@
-
-function calculateTip(billAmount, tipPercentage) {
+function reverseArray(arr) {
   // Write your code here
-  return billAmount * (tipPercentage/100);
+  let currentArray = arr;
+  let reversedArray = Array();
+  // for (let i=0; i<currentArray.length; i++) or
+  while (currentArray.length !== 0){
+    let popItem = currentArray.pop();
+    reversedArray.push(popItem);
+  }
+  return reversedArray;
 }
-console.log("The tip should be: ", calculateTip(50, 15)); // Example: Output should be 7.5
+console.log("New Array: ", reverseArray([1, 2, 3, 4, 5]));
