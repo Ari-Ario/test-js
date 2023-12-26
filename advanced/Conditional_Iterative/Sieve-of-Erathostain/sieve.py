@@ -11,7 +11,7 @@ def sieve_of_eratosthenes(n):
             elif i % j == 0 :
                 lst.remove(i)
                 break
-
+    
 
     return lst
 

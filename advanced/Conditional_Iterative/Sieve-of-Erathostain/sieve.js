@@ -1,6 +1,7 @@
 
 function sieveOfEratosthenes(n){
     let lst= []
+    if (!n || n<2){return "[empty]"}
     for (let i=2; i<=n; i++){
         lst.push(i)
         }
