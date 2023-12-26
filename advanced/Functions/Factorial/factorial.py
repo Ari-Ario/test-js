@@ -6,10 +6,10 @@ def factorial(num):
     return factorial(num-1)*num"""
 
     # or normal-functionl:
-    sum = 1
+    factor = 1
     for i in range(1, num+1):
-        sum*= i
+        factor*= i
 
-    return sum
+    return factor
 
-print(factorial(10))
+print(factorial(6))
