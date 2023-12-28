@@ -18,22 +18,26 @@ function isValidIPv4(ip){
     const octets = ip.split(".");
     if (octets.length !== 4 ){
         return false
+    }else {    
+        for (let i=0; i<octets.length; i++){ return isValidIPv4Octet(octets[i])}
     }
-    octets.forEach(element => {
-        return isValidIPv4Octet(element);
-    });
 }
 
 function isValidIPv6(ip){
-
+    const hextets = ip.split(":")
+    if (hextets.length !== 8) {
+        return false
+    }else {    
+        for (let i=0; i<hextets.length; i++){ return isValidIPv6Hextet(hextets[i]) }
+    }
 }
 
 function isValidIPv4Octet(octet){
-
+    return octet>= 0 && octet <= 255
 }
 
 function isValidIPv6Hextet(hextet){
-
+    return parseInt(hextet, 16)>=0 && parseInt(hextet, 16)<= 65535
 }
 
 const IPv4_STRING = "127.0.0.1"
