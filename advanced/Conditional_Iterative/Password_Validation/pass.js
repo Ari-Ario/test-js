@@ -25,10 +25,10 @@ function passwordValidation(pwd){
     } else {
         sentence= "valid password"
     }
-    console.log(sentence, specialCharCounter, uppercaseCounter, lowercaseCounter, digitCounter)
+    console.log(sentence)
 
 }
 
 passwordValidation("aBJbG85/-")
-const demo = document.getElementById("demo")
-demo.innerHTML= sentence
+// const demo = document.getElementById("demo")
+// demo.innerHTML= sentence
