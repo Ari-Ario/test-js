@@ -1,3 +1,4 @@
+# Python question, although it can be solved as Array in other Languages
 
 Assume you have a list of dictionaries that all have the same keys. For example:
 
