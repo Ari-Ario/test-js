@@ -10,11 +10,13 @@ def process_data(path):
             # case empty file should result in empty file
             if header == "":
                 return None
-
+            # append the line in both case:
             if header.find("\n") != -1:
                 new_list.append("Firstname,Lastname\n")
             else:
                 new_list.append("Firstname,Lastname")
+            # or just: new_list.append("Firstname,Lastname")
+            
             #rest of the lines in the document
             lines = read_from_file.readlines()
             for line in lines:
@@ -40,7 +42,8 @@ def process_data(path):
                     firstname = line[:index_space]
                     lastname = line[index_space + 1:]
                     new_list.append("{},{}".format(firstname, lastname))
-            print(new_list)
+        
+        # writing the collected data of new_list into the same text-file again
         with open(path, "w") as write_to_file:
             for line in new_list:
                 write_to_file.write(line)
