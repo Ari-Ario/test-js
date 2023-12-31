@@ -13,8 +13,10 @@ function compress(data){
         };
         mainArray.push(Object.values(collectArray))
     }
-
-    return [sortedKeys, mainArray]
+    const result= [sortedKeys, mainArray]
+    const immutableResult = Object.freeze(result)
+    // immutableResult.push([123]) //returns an error because it is immutable now
+    return immutableResult
 }
 
 data = [
