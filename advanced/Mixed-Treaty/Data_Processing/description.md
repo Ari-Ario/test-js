@@ -42,22 +42,6 @@ headers `Firstname,Lastname`.
 - The last line of the output file should not contain the trailing newline character (`\n`).
 - You can assume that the last line in the input file will never be an empty line.
 
-**Note:** In ACCESS you will not see the output file you generate. The workspace in access is just
-a starting point. During the execution of "Test & Run" or a submission, the files will only be created
-temporarily, but you will not see them in ACCESS. That is why
-there is a test with the name `test_print_output_file` which shows the content of 
-your file generated in the testing suite. The message of this test can be found
-in the "Test Output" overview after you have run "Test & Run". If your function 
-does not generate a file, the message will be `No output file exists`.
-
-**Note:** Starting with this exercise, we will provide public tests that *fail*
-by default. The tests we provide will *pass* for a correct solution, but keep in
-mind that the grading system runs many more exhaustive tests, so if the public
-test passes, that does not necessarily mean that your solution is 100% correct,
-as it might fail on certain edge or corner cases.
-
-**Note:** The provided script defines the signature of the functions. Do not
-change this signature or the automated grading will fail.
 
 **Note:** To check for the existence of a file, you can use `import os`, followed
 by a `os.path.exists(«path»)`. This snippet is already included in the template,
