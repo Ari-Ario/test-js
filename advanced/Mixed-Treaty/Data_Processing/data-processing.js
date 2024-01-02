@@ -1,4 +1,5 @@
 
+// fs for file system to work on files in operatig-system 
 const fs = require('fs');
 
 function checkFileExists(filePath) {
@@ -21,7 +22,7 @@ function processData(path) {
             const inputString = input.toString()
             const inputArray= inputString.split("\n")
             collectionString+= "Firstname,Lastname\n"
-            // checking the falls of ; and space
+            // checking the falls of ";", space " ", and extra falls in else
             for (let i=0; i< inputArray.length; i++){
                 item = inputArray[i]
                 if (item === ""){
@@ -43,6 +44,7 @@ function processData(path) {
             // deleting the last two characters which is \n: new line, in case it is needed
             collectionString = collectionString.slice(0, -2);
 
+            // writing the processed data into the same file/path
             fs.writeFile(path, collectionString, "utf8", (err) => {
                 if (err){ console.log("Error of kind: ", err); }
                 else { console.log("Data written into file: ", collectionString)}
