@@ -21,9 +21,7 @@ Please make sure that your solution is self-contained within the `get_bmi_catego
 
 ```python
 
-You can format the BMI to 2 decimal places using the following code:
-
-```python
+You can format the BMI to 2 decimal places using the following code (only in python):
 
 bmi = 26.123456789
 print("BMI: {:.2f}".format(bmi))
