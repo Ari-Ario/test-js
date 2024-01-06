@@ -1,18 +1,16 @@
 <?php
 function is_valid_IPv4_octet($octet){
-    echo "$octet";
-    if ($octet >=0 && $octet<=255){
-        return true;
-    } else {return false;}
+    $convertedOctet= intval($octet);
+    return ($convertedOctet >=0 && $convertedOctet<=255);
 }
 
 function is_valid_IPv6_hextet($hextet){
-    return true;
+    $convertedHextet= base_convert($hextet, 16, 10);
+    return ($convertedHextet >=0 && $convertedHextet<=65535);
 }
 
 function is_valid_IPv4($ip){
     $octetArray = preg_split("/[.]/", $ip);
-    print_r($octetArray);
     for ($i=0; $i<sizeof($octetArray); $i++){
         return is_valid_IPv4_octet($octetArray[$i]);
     }
