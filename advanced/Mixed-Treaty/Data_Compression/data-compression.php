@@ -4,12 +4,21 @@ function compress($data){
     $arrayInside= $data[1];
     ksort($arrayInside);
     $arrayKeys = array_keys($arrayInside);
+    $mainArray = Array();
+
+    // a mix of for and foreach, although it is possible with for loop too 
     foreach ($data as $subArrays){
-        foreach ($subArrays as $item){
-            $dict = $item;
+        $collectArray = Array();
+        for ($i=0; $i< count($arrayKeys); $i++){
+            foreach ($subArrays as $item){
+                $value = $subArrays[$arrayKeys[$i]];
+            }
+            array_push($collectArray, $value);
         }
+        array_push($mainArray, $collectArray);
     }
-    print_r($arrayKeys);
+    
+    print_r(Array($arrayKeys, $mainArray));
 }
 
 $data = [
